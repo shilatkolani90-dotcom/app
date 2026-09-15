@@ -5,7 +5,7 @@ class Page(tk.Frame):
         tk.Frame.__init__(self, *args, **kwargs)
     def show(self):
         self.lift()
-
+#
 class Page1(Page):
    def __init__(self, *args, **kwargs):
        Page.__init__(self, *args, **kwargs)
