@@ -2,7 +2,7 @@ import tkinter
 from tkinter import *
 
 from numpy.ma.core import size
-
+#
 window=Tk()
 window.geometry("820x820")
 window.title("my first app")
