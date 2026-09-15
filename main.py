@@ -1,4 +1,4 @@
-import Tkinter as tk
+import tkinter as tk
 
 class Page(tk.Frame):
     def __init__(self, *args, **kwargs):
@@ -9,7 +9,7 @@ class Page(tk.Frame):
 class Page1(Page):
    def __init__(self, *args, **kwargs):
        Page.__init__(self, *args, **kwargs)
-       label = tk.Label(self, text="This is page 1")
+       label = tk.Label(self, text=" Hi welcome to our site",font=('Flux',40,'bold'))
        label.pack(side="top", fill="both", expand=True)
 
 class Page2(Page):
@@ -40,18 +40,19 @@ class MainView(tk.Frame):
         p2.place(in_=container, x=0, y=0, relwidth=1, relheight=1)
         p3.place(in_=container, x=0, y=0, relwidth=1, relheight=1)
 
-        b1 = tk.Button(buttonframe, text="Page 1", command=p1.show)
-        b2 = tk.Button(buttonframe, text="Page 2", command=p2.show)
-        b3 = tk.Button(buttonframe, text="Page 3", command=p3.show)
+        b1 = tk.Button(buttonframe, text="start", command=p1.show)
+        b2 = tk.Button(buttonframe, text="doctor", command=p2.show)
+        b3 = tk.Button(buttonframe, text="patient", command=p3.show)
 
         b1.pack(side="left")
-        b2.pack(side="left")
-        b3.pack(side="left")
+        b2.pack(side="bottom")
+        b3.pack(side="bottom")
 
         p1.show()
 
 if __name__ == "__main__":
     root = tk.Tk()
+    root.title("my app")
     main = MainView(root)
     main.pack(side="top", fill="both", expand=True)
     root.wm_geometry("400x400")
