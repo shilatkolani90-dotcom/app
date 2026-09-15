@@ -31,7 +31,7 @@ def text_box_clicked():
     my_entry = Entry(window, width=40)
     my_entry.place(x=300,y=300)
     my_entry.pack(pady=20)
-
+# a
 
 button_clicked()
 window.mainloop()
