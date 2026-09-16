@@ -1,4 +1,5 @@
 import tkinter
+from random import choice
 from tkinter import *
 
 # root = tkinter.Tk()
@@ -70,6 +71,9 @@ class Frame(tkinter.Frame):
                 c.pack_forget()
             for c in self.nonperishables:
                 c.pack(anchor="center", padx=5, pady=5)
+
+
+
 
 
 if __name__ == "__main__":

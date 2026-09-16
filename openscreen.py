@@ -1,7 +1,8 @@
 import tkinter
 from tkinter import *
 from tkinter import messagebox
-
+from PIL import ImageTk, Image
+import os
 # from numpy.ma.core import size
 #shalom
 window=Tk()
@@ -13,6 +14,14 @@ photo=PhotoImage(file='mom.png')
 #relief=RAISED,bd=10,padx=20,pady=20,image=photo,compound="top"
 label=Label(window,text="hello,welcome to our site",font=('Flux',40,'bold'),fg="white",background="#ebaeb8")
 label.place(x=70,y=0)
+
+
+mystring =StringVar(window)
+list1=[mystring]
+
+# Importing tkinter
+import tkinter as tk
+
 
 def button_clicked():
     def helloCallBack():

@@ -1,4 +1,6 @@
 import tkinter as tk
+from PIL import ImageTk, Image
+import os
 
 # Lucida Handwriting
 # Centaur
@@ -15,7 +17,6 @@ class Page1(Page):
        label.pack(side="top")
 
        self.config(bg="pink")
-#bb
 
 class Page2(Page):
    def __init__(self, *args, **kwargs):
@@ -23,6 +24,12 @@ class Page2(Page):
        label = tk.Label(self, text="This is page 2",background="pink")
        label.pack(side="top", fill="both", expand=True)
        self.config(bg="pink")
+       # image = tk.PhotoImage(file='flag.png')
+       # smaller_image = image.subsample(2, 2)# create a new image half as large as the original
+       # myCanvas = tk.Canvas(root, width=300, height=300)
+       # myCanvas.pack()
+       # myCanvas.create_image(50, 50,  image=smaller_image)
+
 
 class Page3(Page):
    def __init__(self, *args, **kwargs):
