@@ -48,6 +48,6 @@ img = ImageTk.PhotoImage(file='doctor_resized.png')
 imgLabel = Label(window, image=img)
 imgLabel.place(x=200, y=100)
 
-
+# h
 
 window.mainloop()
