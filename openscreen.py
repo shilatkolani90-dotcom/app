@@ -39,7 +39,7 @@ user_img = ImageTk.PhotoImage(file='user_resized.png')
 imgLabel = Label(window, image=user_img)
 imgLabel.place(x=200, y=100)
 
-
+#
 doc_img = Image.open("doctor1.png")
 res_doc_img = doc_img.resize((400, 300))
 res_doc_img.save('doc_resized.png')
