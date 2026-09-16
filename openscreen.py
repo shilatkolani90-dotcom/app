@@ -47,6 +47,6 @@ userLabel.place(x=200, y=100)
 doc_img = ImageTk.PhotoImage(file='doc_resized.png')
 docLabel = Label(window, image=doc_img)
 docLabel.place(x=200, y=100)
-#
-#
+
+
 window.mainloop()
