@@ -47,6 +47,6 @@ res_doc_img.save('doc_resized.png')
 doc_img = ImageTk.PhotoImage(file='doctor_resized.png')
 imgLabel = Label(window, image=doc_img)
 imgLabel.place(x=200, y=100)
-
+#
 
 window.mainloop()
