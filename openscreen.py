@@ -2,6 +2,20 @@ import tkinter
 from tkinter import *
 from tkinter import messagebox
 
+
+def text_list():
+    temp_text = ""
+    for i in range(len(constants.PSYCHOLOGIST)):
+        for key in constants.PSYCHOLOGIST[i].keys():
+            temp_text += constants.PSYCHOLOGIST[i][key] + " "
+        temp_text += "\n"
+    print(temp_text)
+    return temp_text
+
+
+text1 = text_list()
+meet = tk.Label(self, text=text1, font=('calibre', 10, 'bold'), background="pink")
+meet.pack(side="top")
 # from numpy.ma.core import size
 #shalom
 window=Tk()
