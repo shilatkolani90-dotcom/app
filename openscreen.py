@@ -29,23 +29,24 @@ label.place(x=70,y=0)
 
 import tkinter as tk
 from tkinter import PhotoImage
+from PIL import ImageTk, Image
 
-#
-# # Load the image
-# image = PhotoImage(file="doctor.png")
-#
-# # Create a label to display the image
-# image_label = tk.Label(window, image=image)
-# image_label.pack()
+img = Image.open("user1.png")
+res_img = img.resize((400, 300))
+res_img.save('user_resized.png')
 
-# path = tk.filedialog.askopenfilename(filetypes=fileTypes)
-# img = Image.open(path)
-# img = img.resize((200, 200))
-# pic = ImageTk.PhotoImage(img)
-#
-# app.geometry("560x300")
-# label.config(image=pic)
-# label.image = pic
+img = ImageTk.PhotoImage(file='user_resized.png')
+imgLabel = Label(window, image=img)
+imgLabel.place(x=200, y=100)
+
+
+img = Image.open("doctor1.png")
+res_img = img.resize((400, 300))
+res_img.save('user_resized.png')
+
+img = ImageTk.PhotoImage(file='doctor_resized.png')
+imgLabel = Label(window, image=img)
+imgLabel.place(x=200, y=100)
 
 
 
