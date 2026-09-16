@@ -25,7 +25,7 @@ class Page2(Page):
        self.config(bg="pink")
        name_var = tk.StringVar()
        passw_var = tk.StringVar()
-
+       #
        def submit():
            name = name_var.get()
            password = passw_var.get()
