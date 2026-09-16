@@ -35,18 +35,18 @@ user_img = Image.open("user1.png")
 res_user_img = user_img.resize((400, 300))
 res_user_img.save('user_resized.png')
 
-user_img = ImageTk.PhotoImage(file='user_resized.png')
-imgLabel = Label(window, image=user_img)
-imgLabel.place(x=200, y=100)
-
-
 doc_img = Image.open("doctor1.png")
 res_doc_img = doc_img.resize((400, 300))
 res_doc_img.save('doc_resized.png')
 
-doc_img = ImageTk.PhotoImage(file='doctor_resized.png')
-imgLabel = Label(window, image=doc_img)
-imgLabel.place(x=200, y=100)
+
+user_img = ImageTk.PhotoImage(file='user_resized.png')
+userLabel = Label(window, image=user_img)
+userLabel.place(x=200, y=100)
+
+doc_img = ImageTk.PhotoImage(file='doc_resized.png')
+docLabel = Label(window, image=doc_img)
+docLabel.place(x=200, y=100)
 #
 #
 window.mainloop()
