@@ -69,7 +69,7 @@ class Page3(Page):
         list_of_loc = {}
         list_of_loc = filter.filter1(self)
 
-
+#
         def text_list():
             temp_text = ""
             for i in range(len(constants.PSYCHOLOGIST)):
