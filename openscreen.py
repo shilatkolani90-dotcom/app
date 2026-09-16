@@ -14,39 +14,19 @@ photo=PhotoImage(file='mom.png')
 label=Label(window,text="hello,welcome to our site",font=('Flux',40,'bold'),fg="white",background="#ebaeb8")
 label.place(x=70,y=0)
 
-# def button_clicked():
-#     def helloCallBack():
-#        msg  = messagebox.showinfo( "arbeltry", "good")
-#
-#
-#     B = Button(window, text ="Hello", command = helloCallBack, activebackground="blue", width=15, height=2)
-#     B.place(x=200,y=200)
-
-# def text_box_clicked():
-#     my_entry = Entry(window, width=40)
-#     my_entry.place(x=300,y=300)
-#     my_entry.pack(pady=20)
-
-import tkinter as tk
-from tkinter import PhotoImage
-from PIL import ImageTk, Image
-
-user_img = Image.open("user1.png")
-res_user_img = user_img.resize((400, 300))
-res_user_img.save('user_resized.png')
-
-doc_img = Image.open("doctor1.png")
-res_doc_img = doc_img.resize((400, 300))
-res_doc_img.save('doc_resized.png')
+def button_clicked():
+    def helloCallBack():
+       msg  = messagebox.showinfo( "arbeltry", "good")
 
 
-user_img = ImageTk.PhotoImage(file='user_resized.png')
-userLabel = Label(window, image=user_img)
-userLabel.place(x=200, y=100)
+    B = Button(window, text ="Hello", command = helloCallBack, activebackground="blue", width=15, height=2)
+    B.place(x=200,y=200)
 
-doc_img = ImageTk.PhotoImage(file='doc_resized.png')
-docLabel = Label(window, image=doc_img)
-docLabel.place(x=200, y=100)
+def text_box_clicked():
+    my_entry = Entry(window, width=40)
+    my_entry.place(x=300,y=300)
+    my_entry.pack(pady=20)
+# a
 
-
+button_clicked()
 window.mainloop()
