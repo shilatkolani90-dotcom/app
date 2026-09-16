@@ -31,21 +31,21 @@ import tkinter as tk
 from tkinter import PhotoImage
 from PIL import ImageTk, Image
 
-img = Image.open("user1.png")
-res_img = img.resize((400, 300))
-res_img.save('user_resized.png')
+user_img = Image.open("user1.png")
+res_user_img = user_img.resize((400, 300))
+res_user_img.save('user_resized.png')
 
-img = ImageTk.PhotoImage(file='user_resized.png')
-imgLabel = Label(window, image=img)
+user_img = ImageTk.PhotoImage(file='user_resized.png')
+imgLabel = Label(window, image=user_img)
 imgLabel.place(x=200, y=100)
 
 
-img = Image.open("doctor1.png")
-res_img = img.resize((400, 300))
-res_img.save('user_resized.png')
+doc_img = Image.open("doctor1.png")
+res_doc_img = doc_img.resize((400, 300))
+res_doc_img.save('doc_resized.png')
 
-img = ImageTk.PhotoImage(file='doctor_resized.png')
-imgLabel = Label(window, image=img)
+doc_img = ImageTk.PhotoImage(file='doctor_resized.png')
+imgLabel = Label(window, image=doc_img)
 imgLabel.place(x=200, y=100)
 #hi noga
 
