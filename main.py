@@ -15,7 +15,7 @@ class Page1(Page):
        label.pack(side="top")
 
        self.config(bg="pink")
-
+#
 class Page2(Page):
    def __init__(self, *args, **kwargs):
        Page.__init__(self, *args, **kwargs)
