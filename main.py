@@ -1,6 +1,7 @@
 import tkinter as tk
 from PIL import ImageTk, Image
 import os
+import filter
 
 # Lucida Handwriting
 # Centaur
@@ -21,22 +22,40 @@ class Page1(Page):
 class Page2(Page):
    def __init__(self, *args, **kwargs):
        Page.__init__(self, *args, **kwargs)
-       label = tk.Label(self, text="This is page 2",background="pink")
-       label.pack(side="top", fill="both", expand=True)
        self.config(bg="pink")
-       # image = tk.PhotoImage(file='flag.png')
-       # smaller_image = image.subsample(2, 2)# create a new image half as large as the original
-       # myCanvas = tk.Canvas(root, width=300, height=300)
-       # myCanvas.pack()
-       # myCanvas.create_image(50, 50,  image=smaller_image)
+       name_var = tk.StringVar()
+       passw_var = tk.StringVar()
+
+       def submit():
+           name = name_var.get()
+           password = passw_var.get()
+
+           print("The name is : " + name)
+           print("The password is : " + password)
+
+           name_var.set("")
+           passw_var.set("")
+
+       name_label = tk.Label(self, text='class theme', font=('calibre', 10, 'bold'))
+       name_label.pack(side="top")
+       name_entry = tk.Entry(self, textvariable=name_var, font=('calibre', 10, 'normal'))
+       name_entry.pack(side="top")
+       passw_label = tk.Label(self, text='time', font=('calibre', 10, 'bold'))
+       passw_label.pack(side="top")
+       passw_entry = tk.Entry(self, textvariable=passw_var, font=('calibre', 10, 'normal'))
+       passw_entry.pack(side="top")
+       sub_btn = tk.Button(self, text='Submit', command=submit)
+       sub_btn.pack(side="top")
+
 
 
 class Page3(Page):
    def __init__(self, *args, **kwargs):
        Page.__init__(self, *args, **kwargs)
-       label = tk.Label(self, text="This is page 3",background="pink")
-       label.pack(side="top")
        self.config(bg="pink")
+       list_of_loc={}
+       list_of_loc=filter.filter1(self)
+
 
 class MainView(tk.Frame):
     def __init__(self, *args, **kwargs):
