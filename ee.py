@@ -7,7 +7,7 @@ def choice():
     if choiceNum.get()==1:
         list1["class"]="mom d"
         list1["time"] = "9:00"
-# GUI2
+# GUI
 window = tk.Tk()
 window.title("Geeksforgeeks")
 window.geometry("300x200")
