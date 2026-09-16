@@ -1,6 +1,8 @@
 import tkinter as tk
 from PIL import ImageTk, Image
 import os
+
+import constants
 import filter
 
 # Lucida Handwriting
@@ -25,16 +27,27 @@ class Page2(Page):
        self.config(bg="pink")
        name_var = tk.StringVar()
        passw_var = tk.StringVar()
+       Pname_ver=  tk.StringVar()
+       loction_var = tk.StringVar()
+       date_var = tk.StringVar()
        #
        def submit():
            name = name_var.get()
            password = passw_var.get()
+           Pname=Pname_ver.get()
+           loction = loction_var.get()
+           date = date_var.get()
 
-           print("The name is : " + name)
-           print("The password is : " + password)
+           dict_temp =  {"name": Pname,"place":loction,'date':date,"hour":password,"sub":name}
+           constants.PSYCHOLOGIST.append(dict_temp)
+           print(constants.PSYCHOLOGIST)
 
            name_var.set("")
            passw_var.set("")
+           Pname_ver.set("")
+           loction_var.set("")
+           date_var.set("")
+
 
        name_label = tk.Label(self, text='class theme', font=('calibre', 10, 'bold'))
        name_label.pack(side="top")
@@ -46,15 +59,15 @@ class Page2(Page):
        passw_entry.pack(side="top")
        loc_label = tk.Label(self, text='loction', font=('calibre', 10, 'bold'))
        loc_label.pack(side="top")
-       loc_entry = tk.Entry(self, textvariable=passw_var, font=('calibre', 10, 'normal'))
+       loc_entry = tk.Entry(self, textvariable=loction_var, font=('calibre', 10, 'normal'))
        loc_entry.pack(side="top")
        date_label = tk.Label(self, text='date', font=('calibre', 10, 'bold'))
        date_label.pack(side="top")
-       date_entry = tk.Entry(self, textvariable=passw_var, font=('calibre', 10, 'normal'))
+       date_entry = tk.Entry(self, textvariable=date_var, font=('calibre', 10, 'normal'))
        date_entry.pack(side="top")
        Pname_label = tk.Label(self, text='your name', font=('calibre', 10, 'bold'))
        Pname_label.pack(side="top")
-       Pname_entry = tk.Entry(self, textvariable=passw_var, font=('calibre', 10, 'normal'))
+       Pname_entry = tk.Entry(self, textvariable=Pname_ver, font=('calibre', 10, 'normal'))
        Pname_entry.pack(side="top")
        sub_btn = tk.Button(self, text='Submit', command=submit)
        sub_btn.pack(side="top")
