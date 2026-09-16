@@ -74,6 +74,7 @@ class Frame(tkinter.Frame):
 
 if __name__ == "__main__":
     root = tkinter.Tk()
+    root.geometry("440x640")
     frame = Frame(root)
     frame.pack(expand=True, fill="both")
     root.mainloop()
